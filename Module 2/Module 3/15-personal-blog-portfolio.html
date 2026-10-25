@@ -1,0 +1,332 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog and Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7fb;
+            color: #263238;
+        }
+
+        header {
+            background-color: #173b57;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: #102b40;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #80deea;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            scroll-margin-top: 80px;
+        }
+
+        h2 {
+            color: #173b57;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #80deea;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #245b78;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .project-container,
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .card {
+            flex: 1 1 250px;
+            border: 1px solid #dce5ec;
+            border-radius: 8px;
+            padding: 18px;
+            background-color: #f9fbfd;
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #d9f2f5;
+            color: #173b57;
+            padding: 4px 10px;
+            margin: 4px 3px 4px 0;
+            border-radius: 15px;
+        }
+
+        .contact-link {
+            color: #176b87;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #173b57;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+
+            section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Personal Blog &amp; Portfolio</h1>
+        <p>Learning, Creating, and Growing Every Day</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p>
+                Hello! Welcome to my personal portfolio.
+                I am a student who enjoys learning new technologies
+                and developing creative projects.
+            </p>
+
+            <p>
+                I am currently exploring web development and learning
+                how to create webpages using HTML and CSS.
+                This website presents my learning journey,
+                skills, projects, and interests.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <article>
+                <h3>My Academic Journey</h3>
+
+                <p>
+                    I am continuing my education and building my
+                    understanding of computers and technology.
+                </p>
+
+                <ul>
+                    <li>Learning computer fundamentals</li>
+                    <li>Practising HTML and CSS</li>
+                    <li>Developing problem-solving skills</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+
+            <p>Some of the topics I am learning include:</p>
+
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Problem-Solving</span>
+            <span class="tag">Communication</span>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <div class="project-container">
+
+                <article class="card">
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A webpage introducing me and displaying
+                        my skills, education, and interests using HTML.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>College Information Page</h3>
+
+                    <p>
+                        A structured webpage presenting college
+                        and course information using HTML lists.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Accessible Webpage</h3>
+
+                    <p>
+                        A webpage demonstrating meaningful alternative
+                        text for informative images.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>My Blog</h2>
+
+            <div class="blog-container">
+
+                <article class="card">
+                    <h3>My Web Development Journey</h3>
+
+                    <p>
+                        I started learning HTML to understand how
+                        webpages are structured. I am now exploring
+                        CSS to improve webpage design and layout.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Why I Am Learning HTML and CSS</h3>
+
+                    <p>
+                        HTML helps me organize webpage content,
+                        while CSS allows me to control colours,
+                        spacing, layouts, and visual appearance.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <aside>
+            <section id="interests">
+                <h2>My Interests and Goals</h2>
+
+                <ul>
+                    <li>Learning new technologies</li>
+                    <li>Building creative webpages</li>
+                    <li>Improving communication skills</li>
+                    <li>Practising coding regularly</li>
+                </ul>
+            </section>
+        </aside>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                Thank you for visiting my portfolio.
+                You can add your contact information below.
+            </p>
+
+            <p>
+                Email:
+                <a class="contact-link"
+                   href="mailto:your-email@example.com">
+                    your-email@example.com
+                </a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Personal Blog and Portfolio</p>
+        <p>Designed using HTML and CSS.</p>
+    </footer>
+
+</body>
+</html>
+```

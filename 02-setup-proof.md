@@ -20,9 +20,10 @@ To verify the installation and working of Visual Studio Code, Node.js, and the L
 
 The screenshot below provides evidence of the development tools setup.
 # 
-[Screenshots](<../Assignment 2>)
+![VS Code Screenshot](<Module 1/vscode-setup.png.png>)
+![alt text](<Module 1/node-setup.png.png>)
+![alt text](<Module 1/liveserver-setup.png.png>)
+
 
 ## Result
 The development environment was verified after checking the installed tools and opening an HTML page using Live Server.
-
-[Screenshots]: <../Assignment 2>
