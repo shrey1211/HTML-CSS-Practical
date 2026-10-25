@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 42 - Responsive Product Store</title>
+
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Main page layout */
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar products"
+                "footer footer";
+            grid-template-columns: 220px minmax(0, 1fr);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+            background-color: #263238;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            font-size: clamp(22px, 3vw, 30px);
+        }
+
+        .search-box {
+            width: min(100%, 280px);
+            padding: 11px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Sidebar */
+        aside {
+            grid-area: sidebar;
+            background-color: white;
+            padding: 25px 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        aside h2 {
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            margin-bottom: 12px;
+        }
+
+        aside a {
+            color: #37474f;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        aside a:hover {
+            color: #007bff;
+        }
+
+        /* Product section */
+        main {
+            grid-area: products;
+            min-width: 0;
+            padding: 25px;
+        }
+
+        main h2 {
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        /* Product cards */
+        .product-card {
+            min-width: 0;
+            background-color: white;
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-image {
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eaf0f5;
+            border-radius: 8px;
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .price {
+            color: #16803c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            max-width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* FIX 1: Smaller desktops and tablets */
+        @media (max-width: 1000px) {
+            .container {
+                grid-template-columns: 190px minmax(0, 1fr);
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            header {
+                padding: 20px;
+            }
+        }
+
+        /* FIX 2: Mobile phones */
+        @media (max-width: 650px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "products"
+                    "footer";
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            header {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 18px;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            aside {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding: 18px;
+            }
+
+            aside ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 18px;
+            }
+
+            aside li {
+                margin: 0;
+            }
+
+            main {
+                padding: 18px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .product-card {
+                padding: 12px;
+            }
+
+            .product-image {
+                min-height: 90px;
+                font-size: 42px;
+            }
+
+            .product-card h3 {
+                font-size: 16px;
+            }
+
+            .product-card button {
+                padding: 9px;
+            }
+        }
+
+        /* FIX 3: Very narrow mobile screens */
+        @media (max-width: 380px) {
+            .product-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            main {
+                padding: 12px;
+            }
+
+            .product-card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>ShopEasy</h1>
+            <input
+                class="search-box"
+                type="search"
+                placeholder="Search products..."
+                aria-label="Search products">
+        </header>
+
+        <aside>
+            <h2>Categories</h2>
+
+            <ul>
+                <li><a href="#electronics">Electronics</a></li>
+                <li><a href="#fashion">Fashion</a></li>
+                <li><a href="#home">Home & Living</a></li>
+                <li><a href="#accessories">Accessories</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Featured Products</h2>
+
+            <div class="product-grid">
+
+                <article class="product-card" id="electronics">
+                    <div class="product-image" aria-hidden="true">🎧</div>
+                    <h3>Wireless Headphones</h3>
+                    <p class="price">₹1,499</p>
+                    <button type="button">View Product</button>
+                </article>
+
+                <article class="product-card" id="fashion">
+                    <div class="product-image" aria-hidden="true">👟</div>
+                    <h3>Running Shoes</h3>
+                    <p class="price">₹2,199</p>
+                    <button type="button">View Product</button>
+                </article>
+
+                <article class="product-card" id="home">
+                    <div class="product-image" aria-hidden="true">🪴</div>
+                    <h3>Decorative Plant</h3>
+                    <p class="price">₹499</p>
+                    <button type="button">View Product</button>
+                </article>
+
+                <article class="product-card" id="accessories">
+                    <div class="product-image" aria-hidden="true">⌚</div>
+                    <h3>Smart Watch</h3>
+                    <p class="price">₹2,999</p>
+                    <button type="button">View Product</button>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">🎒</div>
+                    <h3>Travel Backpack</h3>
+                    <p class="price">₹899</p>
+                    <button type="button">View Product</button>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image" aria-hidden="true">📷</div>
+                    <h3>Digital Camera</h3>
+                    <p class="price">₹4,499</p>
+                    <button type="button">View Product</button>
+                </article>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ShopEasy. All rights reserved.</p>
+            <p>Responsive layout created using HTML and CSS Grid.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

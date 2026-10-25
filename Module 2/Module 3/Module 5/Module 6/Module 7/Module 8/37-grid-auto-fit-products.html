@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 37 - Responsive Product Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #253858;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 18px;
+            text-align: center;
+        }
+
+        .product-info h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            color: #16803c;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-info button {
+            background-color: #253858;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .product-info button:hover {
+            background-color: #405d8c;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #253858;
+            color: white;
+            padding: 18px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Online Store</h1>
+        <p>Discover our latest products at great prices!</p>
+    </header>
+
+    <main class="container">
+
+        <section class="product-grid">
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Wireless headphones">
+                <div class="product-info">
+                    <h2>Headphones</h2>
+                    <p>Enjoy clear sound and comfortable listening.</p>
+                    <div class="price">₹1,499</div>
+                    <button type="button">View Product</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Classic wristwatch">
+                <div class="product-info">
+                    <h2>Wristwatch</h2>
+                    <p>A stylish watch for everyday use.</p>
+                    <div class="price">₹2,199</div>
+                    <button type="button">View Product</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Red sports shoe">
+                <div class="product-info">
+                    <h2>Sports Shoes</h2>
+                    <p>Comfortable shoes for your daily activities.</p>
+                    <div class="price">₹1,899</div>
+                    <button type="button">View Product</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" alt="Vintage camera">
+                <div class="product-info">
+                    <h2>Camera</h2>
+                    <p>Capture your favourite moments in style.</p>
+                    <div class="price">₹4,999</div>
+                    <button type="button">View Product</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80" alt="Modern headphones">
+                <div class="product-info">
+                    <h2>Music Headset</h2>
+                    <p>Listen to music with a comfortable headset.</p>
+                    <div class="price">₹1,799</div>
+                    <button type="button">View Product</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80" alt="Fashion clothing collection">
+                <div class="product-info">
+                    <h2>Fashion Wear</h2>
+                    <p>Refresh your wardrobe with casual styles.</p>
+                    <div class="price">₹999</div>
+                    <button type="button">View Product</button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Online Store. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
