@@ -1,0 +1,240 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            color: #263238;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #173b57;
+        }
+
+        form {
+            max-width: 750px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 18px;
+            border: 1px solid #b8c7d1;
+            border-radius: 6px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #173b57;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="range"]):not([type="hidden"]),
+        select,
+        textarea {
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 9px;
+            margin-top: 5px;
+        }
+
+        .text-field {
+            width: 100%;
+        }
+
+        .choice-label {
+            margin-right: 12px;
+        }
+
+        button,
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"] {
+            padding: 10px 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .actions {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="form_type" value="job_application">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label><br>
+            <input class="text-field" type="text" id="fullname"
+                   name="fullname" placeholder="Enter your full name"
+                   autocomplete="name" required><br>
+
+            <label for="email">Email Address:</label><br>
+            <input class="text-field" type="email" id="email"
+                   name="email" placeholder="name@example.com"
+                   autocomplete="email" required><br>
+
+            <label for="password">Account Password (Demo):</label><br>
+            <input class="text-field" type="password" id="password"
+                   name="password" minlength="8"
+                   placeholder="Enter at least 8 characters"><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input class="text-field" type="tel" id="phone"
+                   name="phone" placeholder="Enter phone number"
+                   autocomplete="tel"><br>
+
+            <label for="birthdate">Date of Birth:</label><br>
+            <input type="date" id="birthdate" name="birthdate"><br>
+
+            <p>Gender (optional):</p>
+
+            <input type="radio" id="gender1" name="gender" value="female">
+            <label class="choice-label" for="gender1">Female</label>
+
+            <input type="radio" id="gender2" name="gender" value="male">
+            <label class="choice-label" for="gender2">Male</label>
+
+            <input type="radio" id="gender3" name="gender" value="other">
+            <label class="choice-label" for="gender3">Other</label>
+            <br>
+
+            <label for="website">Portfolio Website:</label><br>
+            <input class="text-field" type="url" id="website"
+                   name="website" placeholder="https://example.com"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Professional Information</legend>
+
+            <label for="position">Desired Position:</label><br>
+            <select class="text-field" id="position" name="position" required>
+                <option value="">-- Select Position --</option>
+                <option value="web-developer">Web Developer</option>
+                <option value="software-developer">Software Developer</option>
+                <option value="designer">Web Designer</option>
+                <option value="intern">Intern</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="qualification">Highest Qualification:</label><br>
+            <input class="text-field" type="text" id="qualification"
+                   name="qualification" placeholder="Enter qualification"><br>
+
+            <label for="experience">Years of Experience:</label><br>
+            <input class="text-field" type="number" id="experience"
+                   name="experience" min="0" max="50"
+                   placeholder="Enter years of experience"><br>
+
+            <label for="skills-search">Search for a Skill:</label><br>
+            <input class="text-field" type="search" id="skills-search"
+                   name="skills_search" placeholder="e.g. HTML, CSS"><br>
+
+            <p>Skills:</p>
+
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label class="choice-label" for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label class="choice-label" for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+            <label class="choice-label" for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="communication" name="skills" value="Communication">
+            <label class="choice-label" for="communication">Communication</label>
+            <br><br>
+
+            <label for="resume">Upload Resume:</label><br>
+            <input type="file" id="resume" name="resume"
+                   accept=".pdf,.doc,.docx"><br>
+
+            <label for="additional-files">Upload Supporting Files (Optional):</label><br>
+            <input type="file" id="additional-files" name="additional_files"
+                   accept=".pdf,.png,.jpg,.jpeg" multiple><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Job Preferences</legend>
+
+            <label for="start-date">Available Start Date:</label><br>
+            <input type="date" id="start-date" name="start_date"><br>
+
+            <label for="interview-time">Preferred Interview Time:</label><br>
+            <input type="time" id="interview-time" name="interview_time"><br>
+
+            <label for="interview-datetime">Preferred Interview Date and Time:</label><br>
+            <input type="datetime-local" id="interview-datetime"
+                   name="interview_datetime"><br>
+
+            <label for="start-month">Preferred Starting Month:</label><br>
+            <input type="month" id="start-month" name="start_month"><br>
+
+            <label for="available-week">Preferred Starting Week:</label><br>
+            <input type="week" id="available-week" name="available_week"><br>
+
+            <label for="work-hours">Preferred Weekly Working Hours:</label><br>
+            <input type="range" id="work-hours" name="work_hours"
+                   min="10" max="40" value="30"><br>
+
+            <label for="theme-color">Choose a Portfolio Theme Colour:</label><br>
+            <input type="color" id="theme-color" name="theme_color"
+                   value="#173b57"><br>
+
+            <label for="expected-salary">Expected Annual Salary (in ₹):</label><br>
+            <input class="text-field" type="number" id="expected-salary"
+                   name="expected_salary" min="0"
+                   placeholder="Enter expected salary"><br>
+
+            <label for="cover-letter">Cover Letter:</label><br>
+            <textarea class="text-field" id="cover-letter" name="cover_letter"
+                      rows="5"
+                      placeholder="Explain why you are suitable for this position"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Final Confirmation</legend>
+
+            <input type="checkbox" id="confirm" name="confirm" value="yes" required>
+            <label for="confirm">
+                I confirm that the information provided is accurate.
+            </label>
+        </fieldset>
+
+        <div class="actions">
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Reset Form">
+
+            <input type="button" value="Demo Button"
+                   onclick="alert('This is a demonstration button.');">
+        </div>
+
+    </form>
+
+</body>
+</html>
+```

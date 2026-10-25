@@ -1,0 +1,217 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Size Chart</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 30px 15px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .product-info {
+            background-color: #f8f1e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .product-info h2 {
+            margin-top: 0;
+            color: #7a4b27;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px;
+            color: #333;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #222;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ffe8d1;
+        }
+
+        .size {
+            font-weight: bold;
+            color: #7a4b27;
+        }
+
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff8e8;
+            border-left: 5px solid #e5a04b;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Product Size Chart</h1>
+        <p class="subtitle">Find your perfect fit before placing your order.</p>
+
+        <div class="product-info">
+            <h2>Classic Cotton T-Shirt</h2>
+            <p><strong>Category:</strong> Men's Casual Wear</p>
+            <p><strong>Material:</strong> 100% Cotton</p>
+            <p><strong>Fit:</strong> Regular Fit</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <caption>T-Shirt Size Guide (Measurements in Inches)</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Size</th>
+                        <th scope="col">Chest</th>
+                        <th scope="col">Waist</th>
+                        <th scope="col">Hip</th>
+                        <th scope="col">Length</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="size">S</td>
+                        <td>36</td>
+                        <td>32</td>
+                        <td>36</td>
+                        <td>27</td>
+                    </tr>
+
+                    <tr>
+                        <td class="size">M</td>
+                        <td>38</td>
+                        <td>34</td>
+                        <td>38</td>
+                        <td>28</td>
+                    </tr>
+
+                    <tr>
+                        <td class="size">L</td>
+                        <td>40</td>
+                        <td>36</td>
+                        <td>40</td>
+                        <td>29</td>
+                    </tr>
+
+                    <tr>
+                        <td class="size">XL</td>
+                        <td>42</td>
+                        <td>38</td>
+                        <td>42</td>
+                        <td>30</td>
+                    </tr>
+
+                    <tr>
+                        <td class="size">XXL</td>
+                        <td>44</td>
+                        <td>40</td>
+                        <td>44</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            <strong>Size Guide Tips:</strong>
+            <ul>
+                <li>Measurements are provided in inches.</li>
+                <li>Choose a size by comparing the measurements with the size guide.</li>
+                <li>Measurements are sample values for this assignment.</li>
+                <li>Actual clothing sizes may vary by brand.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Fashion Store | Product Size Guide</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

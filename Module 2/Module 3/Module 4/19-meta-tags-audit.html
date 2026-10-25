@@ -1,0 +1,149 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Description of the webpage -->
+    <meta name="description" content="An example webpage demonstrating an HTML meta tag audit.">
+
+    <!-- Author information -->
+    <meta name="author" content="HTML and CSS Student">
+
+    <!-- Page title -->
+    <title>HTML Meta Tag Audit</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 30px 15px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d3557;
+        }
+
+        .intro {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1d3557;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .note {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px;
+            }
+
+            th, td {
+                padding: 9px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>HTML Meta Tag Audit</h1>
+
+        <p class="intro">
+            This webpage demonstrates important metadata used in HTML documents.
+            Meta tags are placed inside the head section of an HTML file.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>&lt;meta charset="UTF-8"&gt;</td>
+                    <td>Specifies the character encoding.</td>
+                </tr>
+
+                <tr>
+                    <td>Viewport meta tag</td>
+                    <td>Helps the page fit different screen sizes.</td>
+                </tr>
+
+                <tr>
+                    <td>Description meta tag</td>
+                    <td>Provides a short summary of the webpage.</td>
+                </tr>
+
+                <tr>
+                    <td>Author meta tag</td>
+                    <td>Identifies the webpage author.</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;title&gt;</td>
+                    <td>Sets the title displayed in the browser tab.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <strong>Audit reminder:</strong>
+            Open each earlier HTML file, inspect its head section,
+            add missing metadata, avoid duplicate tags, and save the file.
+        </div>
+
+    </div>
+</body>
+</html>
+```
