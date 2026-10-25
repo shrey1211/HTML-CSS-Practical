@@ -1,0 +1,429 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A styled website project with Home, About, Registration, and Contact sections.">
+    <title>Assignment 25 - Styled Website Project</title>
+
+    <style>
+        /* DESIGN CHOICES:
+           Colours: Navy blue, teal, white, and light grey-blue.
+           Fonts: Georgia for headings and Arial for body text.
+           Layout: Cards, consistent spacing, and responsive navigation.
+        */
+
+        :root {
+            --primary-color: #23395B;
+            --secondary-color: #2A7F80;
+            --background-color: #F3F6FA;
+            --card-color: #FFFFFF;
+            --text-color: #333D4B;
+            --muted-color: #65758B;
+            --border-color: #D9E2EC;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--card-color);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+            margin: 0;
+        }
+
+        header p {
+            color: #D8E5F3;
+            margin-bottom: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: var(--card-color);
+            text-align: center;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav a {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            margin: 3px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #E5F3F2;
+            color: #245E60;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        .hero {
+            text-align: center;
+            background-color: #E5F3F2;
+            padding: 35px 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 29px;
+            color: var(--primary-color);
+        }
+
+        .card {
+            background-color: var(--card-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(35, 57, 91, 0.06);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 11px 18px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 11px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: var(--text-color);
+            background-color: var(--card-color);
+            border: 1px solid #B8C5D3;
+            border-radius: 5px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 1px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .note {
+            color: var(--muted-color);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .contact-details {
+            background-color: var(--background-color);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--card-color);
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            nav a {
+                padding: 7px 9px;
+                font-size: 14px;
+            }
+
+            main {
+                padding: 0 12px;
+                margin: 20px auto;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .hero {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- WEBSITE HEADER -->
+    <header>
+        <h1>Student Website</h1>
+        <p>A simple, modern and user-friendly website</p>
+    </header>
+
+    <!-- NAVIGATION BETWEEN ALL FOUR SECTIONS -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#registration">Registration</a>
+        <a href="#contact">Contact</a>
+        <a href="#design-note">Design Note</a>
+    </nav>
+
+    <main>
+
+        <!-- HOME PAGE SECTION -->
+        <section id="home" class="hero">
+            <h2>Welcome to Our Website</h2>
+            <p>
+                Explore our website to learn more about us, register your details,
+                and get in touch with us.
+            </p>
+            <a href="#about" class="button">Learn More</a>
+        </section>
+
+        <section class="card">
+            <h2>What We Offer</h2>
+            <p>
+                This project demonstrates a consistent website design using
+                HTML and CSS. It includes navigation, information sections,
+                and a registration form.
+            </p>
+        </section>
+
+        <!-- ABOUT PAGE SECTION -->
+        <section id="about" class="card">
+            <h2>About Us</h2>
+
+            <h3>Who We Are</h3>
+            <p>
+                We are learners exploring the fundamentals of web development.
+                This website is a practical project created using HTML and CSS.
+            </p>
+
+            <h3>Our Purpose</h3>
+            <p>
+                Our purpose is to build a clear, accessible and attractive
+                website while learning about layouts, colours, typography,
+                and navigation.
+            </p>
+
+            <h3>Our Goals</h3>
+            <ul>
+                <li>Create a consistent design across all sections.</li>
+                <li>Use semantic HTML elements correctly.</li>
+                <li>Practise CSS styling and responsive layouts.</li>
+            </ul>
+        </section>
+
+        <!-- REGISTRATION PAGE SECTION -->
+        <section id="registration" class="card">
+            <h2>Student Registration</h2>
+
+            <form action="#registration" method="get">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Enter your phone number">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Choose a course</option>
+                    <option value="html-css">HTML and CSS</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="computer-science">Computer Science</option>
+                </select>
+
+                <label for="message">Why do you want to register?</label>
+                <textarea id="message" name="message" rows="4"
+                          placeholder="Write a short message"></textarea>
+
+                <button type="submit" class="button">Register</button>
+                <button type="reset" class="button">Reset</button>
+            </form>
+
+            <p class="note">
+                This is a demonstration form. It does not store registration
+                details on a server.
+            </p>
+        </section>
+
+        <!-- CONTACT PAGE SECTION -->
+        <section id="contact" class="card">
+            <h2>Contact Us</h2>
+
+            <p>
+                If you have questions or suggestions about this project,
+                you can use the details and form below.
+            </p>
+
+            <div class="contact-details">
+                <p><strong>Email:</strong> student@example.com</p>
+                <p><strong>Website:</strong> Student Website Project</p>
+                <p><strong>Availability:</strong> Monday to Friday</p>
+            </div>
+
+            <h3>Send a Message</h3>
+
+            <form action="#contact" method="get">
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="contact-name"
+                       placeholder="Enter your name" required>
+
+                <label for="contact-email">Your Email:</label>
+                <input type="email" id="contact-email" name="contact-email"
+                       placeholder="Enter your email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject"
+                       placeholder="Enter the subject">
+
+                <label for="contact-message">Message:</label>
+                <textarea id="contact-message" name="contact-message"
+                          rows="5" placeholder="Write your message"
+                          required></textarea>
+
+                <button type="submit" class="button">Send Message</button>
+            </form>
+
+            <p class="note">
+                This demonstration form does not send messages to an actual
+                recipient.
+            </p>
+        </section>
+
+        <!-- SHORT DESIGN NOTE -->
+        <section id="design-note" class="card">
+            <h2>Design Choices</h2>
+
+            <p>
+                <strong>Colour palette:</strong>
+                Navy blue creates a professional appearance, while teal
+                highlights buttons and important elements. Light grey-blue
+                provides a calm background.
+            </p>
+
+            <p>
+                <strong>Font pairing:</strong>
+                Georgia is used for headings to create visual contrast.
+                Arial is used for body text because it is simple and readable.
+            </p>
+
+            <p>
+                <strong>Layout:</strong>
+                Cards, consistent spacing, rounded corners, and clear headings
+                make the content easy to follow.
+            </p>
+
+            <p>
+                <strong>Navigation:</strong>
+                The navigation bar links directly to the Home, About,
+                Registration, and Contact sections within this file.
+            </p>
+
+            <p>
+                <strong>Responsive design:</strong>
+                A media query adjusts the layout and navigation for smaller
+                screens.
+            </p>
+
+            <p>
+                <strong>Conclusion:</strong>
+                This project demonstrates how HTML and CSS can create a
+                consistent, attractive, and responsive website design.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Website | Assignment 25</p>
+    </footer>
+
+</body>
+</html>
+```

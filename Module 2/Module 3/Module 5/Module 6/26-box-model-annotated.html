@@ -1,0 +1,277 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A demonstration of the CSS box model with annotations.">
+    <title>Assignment 26 - CSS Box Model</title>
+
+    <style>
+        * {
+            box-sizing: content-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background-color: #f3f6fa;
+            color: #26354a;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            background-color: #23395b;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 25px auto;
+        }
+
+        .intro,
+        .explanation {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #23395b;
+        }
+
+        /* THE ELEMENT BEING EXPLAINED */
+        .sample-card {
+            width: 250px;
+            margin: 30px auto;
+            border: 8px solid #287f80;
+            padding: 20px;
+            background-color: #dcecff;
+            text-align: center;
+        }
+
+        .sample-card h3 {
+            margin-top: 0;
+            color: #23395b;
+        }
+
+        /* ANNOTATION LABELS */
+        .labels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .label {
+            padding: 14px;
+            border-radius: 6px;
+            background-color: #f3f6fa;
+            border-left: 5px solid #287f80;
+        }
+
+        .label strong {
+            color: #23395b;
+        }
+
+        .margin-label {
+            border-left-color: #e0a126;
+        }
+
+        .border-label {
+            border-left-color: #287f80;
+        }
+
+        .padding-label {
+            border-left-color: #8e63b5;
+        }
+
+        .content-label {
+            border-left-color: #3983c6;
+        }
+
+        .diagram {
+            background-color: #fff4d8;
+            border: 3px dashed #d69a19;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .diagram-border {
+            background-color: #bde6df;
+            border: 8px solid #287f80;
+            padding: 20px;
+        }
+
+        .diagram-padding {
+            background-color: #eadcf7;
+            padding: 20px;
+        }
+
+        .diagram-content {
+            background-color: #dcecff;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #23395b;
+            color: white;
+            padding: 15px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .labels {
+                grid-template-columns: 1fr;
+            }
+
+            .sample-card {
+                width: auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Box Model</h1>
+        <p>Assignment 26 — Module 6</p>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <h2>Aim</h2>
+            <p>
+                To understand and annotate the CSS box model by examining
+                an element created using HTML and CSS.
+            </p>
+            <p>
+                Every HTML element is represented as a rectangular box
+                consisting of content, padding, border, and margin.
+            </p>
+        </section>
+
+        <section class="explanation">
+            <h2>My Own Element: Sample Card</h2>
+
+            <p>
+                The card below is the element selected for this assignment.
+                Its CSS properties demonstrate the four parts of the box model.
+            </p>
+
+            <!-- THIS IS THE ELEMENT BEING ANALYSED -->
+            <div class="sample-card">
+                <h3>My Sample Card</h3>
+                <p>This is the content area of my element.</p>
+            </div>
+
+            <h2>Annotations</h2>
+
+            <div class="labels">
+                <div class="label margin-label">
+                    <strong>1. Margin — 30px</strong>
+                    <p>
+                        The transparent outer space around the card.
+                        It separates the card from surrounding elements.
+                    </p>
+                </div>
+
+                <div class="label border-label">
+                    <strong>2. Border — 8px</strong>
+                    <p>
+                        The teal-coloured edge surrounding the card's
+                        padding and content.
+                    </p>
+                </div>
+
+                <div class="label padding-label">
+                    <strong>3. Padding — 20px</strong>
+                    <p>
+                        The space between the content and the border.
+                        It gives the text room to breathe.
+                    </p>
+                </div>
+
+                <div class="label content-label">
+                    <strong>4. Content — 250px wide</strong>
+                    <p>
+                        The innermost area containing the heading and
+                        paragraph. The specified content width is 250px.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="explanation">
+            <h2>Box Model Diagram</h2>
+
+            <div class="diagram">
+                <strong>MARGIN</strong>
+
+                <div class="diagram-border">
+                    <strong>BORDER</strong>
+
+                    <div class="diagram-padding">
+                        <strong>PADDING</strong>
+
+                        <div class="diagram-content">
+                            CONTENT
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                The diagram illustrates the order of the box model layers:
+                content is in the centre, padding surrounds the content,
+                the border surrounds the padding, and margin is on the outside.
+            </p>
+        </section>
+
+        <section class="explanation">
+            <h2>CSS Properties Used</h2>
+
+            <p><strong>Width:</strong> 250px</p>
+            <p><strong>Padding:</strong> 20px</p>
+            <p><strong>Border:</strong> 8px solid teal</p>
+            <p><strong>Margin:</strong> 30px auto</p>
+
+            <h2>Conclusion</h2>
+            <p>
+                The CSS box model helps control the size, spacing, and
+                appearance of HTML elements. Understanding these four
+                layers makes webpage layouts easier to design.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>HTML and CSS Practical | Assignment 26</p>
+    </footer>
+
+</body>
+</html>
+```
