@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 33 - Product Listing</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e293b;
+            color: white;
+            padding: 25px 8%;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        /* Main section */
+        main {
+            max-width: 1200px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #1e293b;
+        }
+
+        /* Product listing container */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        /* Individual product card */
+        .product-card {
+            flex: 1 1 230px;
+            max-width: 270px;
+            min-width: 0;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
+        }
+
+        /* Product image */
+        .product-image {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+            background-color: #e2e8f0;
+        }
+
+        /* Product details */
+        .product-details {
+            padding: 18px;
+        }
+
+        .product-details h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0f766e;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            display: block;
+            text-align: center;
+            padding: 11px;
+            background-color: #0f766e;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .buy-button:hover {
+            background-color: #115e59;
+        }
+
+        /* Explanation */
+        .explanation {
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            line-height: 1.8;
+        }
+
+        .explanation h2 {
+            color: #0f766e;
+            margin-bottom: 12px;
+        }
+
+        .explanation code {
+            background-color: #f1f5f9;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #1e293b;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 550px) {
+            header {
+                padding: 22px 15px;
+            }
+
+            .product-container {
+                gap: 15px;
+            }
+
+            .product-card {
+                flex-basis: 100%;
+                max-width: 350px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ShopSmart</h1>
+        <p>Discover products you'll love</p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Our Featured Products</h2>
+
+        <div class="product-container">
+
+            <article class="product-card">
+                <img
+                    class="product-image"
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
+                    alt="Wireless headphones"
+                >
+
+                <div class="product-details">
+                    <h3>Wireless Headphones</h3>
+                    <p class="description">
+                        Enjoy clear sound and comfortable listening.
+                    </p>
+                    <p class="price">₹1,499</p>
+                    <a href="#product1" class="buy-button">View Product</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img
+                    class="product-image"
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+                    alt="Classic wristwatch"
+                >
+
+                <div class="product-details">
+                    <h3>Classic Watch</h3>
+                    <p class="description">
+                        A stylish accessory for everyday use.
+                    </p>
+                    <p class="price">₹2,299</p>
+                    <a href="#product2" class="buy-button">View Product</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img
+                    class="product-image"
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+                    alt="Red sports shoe"
+                >
+
+                <div class="product-details">
+                    <h3>Sports Shoes</h3>
+                    <p class="description">
+                        Lightweight shoes designed for daily activities.
+                    </p>
+                    <p class="price">₹1,899</p>
+                    <a href="#product3" class="buy-button">View Product</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img
+                    class="product-image"
+                    src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600"
+                    alt="Smartwatch"
+                >
+
+                <div class="product-details">
+                    <h3>Smartwatch</h3>
+                    <p class="description">
+                        Keep track of your activities and notifications.
+                    </p>
+                    <p class="price">₹3,499</p>
+                    <a href="#product4" class="buy-button">View Product</a>
+                </div>
+            </article>
+
+        </div>
+
+        <section class="explanation">
+            <h2>How Flex-Wrap Works</h2>
+
+            <p>
+                <strong>1. display: flex;</strong>
+                Arranges the product cards in a flexible row.
+            </p>
+
+            <p>
+                <strong>2. flex-wrap: wrap;</strong>
+                Allows cards to move onto the next line when there is
+                not enough horizontal space.
+            </p>
+
+            <p>
+                <strong>3. justify-content: center;</strong>
+                Centres the cards within the available space.
+            </p>
+
+            <p>
+                <strong>4. gap: 25px;</strong>
+                Adds space between the product cards.
+            </p>
+
+            <p>
+                <strong>5. Media query:</strong>
+                Adjusts the product cards for smaller screens.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Assignment 33 — Responsive Product Listing Using Flexbox</p>
+    </footer>
+
+</body>
+</html>

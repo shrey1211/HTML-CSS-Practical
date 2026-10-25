@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 30 - Profile Card</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 15px;
+            color: #1e293b;
+        }
+
+        h1 {
+            text-align: center;
+            color: #312e81;
+            margin-bottom: 10px;
+        }
+
+        .aim {
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Profile card */
+        .profile-card {
+            width: 100%;
+            max-width: 350px;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(49, 46, 129, 0.15);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 35px rgba(49, 46, 129, 0.22);
+        }
+
+        .card-header {
+            height: 120px;
+            background: linear-gradient(135deg, #4f46e5, #9333ea);
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-top: -60px;
+            background-color: #e0e7ff;
+        }
+
+        .profile-content {
+            padding: 20px 25px 30px;
+        }
+
+        .profile-content h2 {
+            font-size: 25px;
+            color: #312e81;
+            margin: 12px 0 6px;
+        }
+
+        .role {
+            color: #7c3aed;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .skill {
+            background-color: #ede9fe;
+            color: #5b21b6;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            width: 100%;
+            padding: 13px;
+            border-radius: 10px;
+            background-color: #4f46e5;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #3730a3;
+        }
+
+        .conclusion {
+            max-width: 700px;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            line-height: 1.7;
+        }
+
+        .conclusion h2 {
+            color: #312e81;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 400px) {
+            .profile-content {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Assignment 30: Profile Card</h1>
+
+    <p class="aim">
+        <strong>Aim:</strong> To create a finished, responsive profile-card
+        component using HTML and CSS.
+    </p>
+
+    <article class="profile-card">
+
+        <div class="card-header"></div>
+
+        <img
+            class="profile-image"
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&crop=faces"
+            alt="Profile portrait"
+        >
+
+        <div class="profile-content">
+
+            <h2>Alex Morgan</h2>
+
+            <p class="role">Web Designer &amp; Developer</p>
+
+            <p class="description">
+                I enjoy creating clean, user-friendly websites and
+                learning new technologies to turn creative ideas
+                into digital experiences.
+            </p>
+
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">UI Design</span>
+            </div>
+
+            <a class="contact-button" href="mailto:hello@example.com">
+                Contact Me
+            </a>
+
+        </div>
+
+    </article>
+
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+
+        <p>
+            This assignment demonstrates a finished profile-card component
+            using HTML and CSS. The card includes a profile image, name,
+            professional role, description, skill labels, and a contact
+            button. CSS gradients, rounded corners, shadows, hover effects,
+            and responsive styling improve its appearance and usability.
+        </p>
+    </section>
+
+</body>
+</html>

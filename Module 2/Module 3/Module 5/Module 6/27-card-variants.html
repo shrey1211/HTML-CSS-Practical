@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 27 - Three Styled Cards</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 30px;
+            color: #1e293b;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        .aim {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 260px;
+            padding: 25px;
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Card 1: Rounded corners and light background */
+        .card-one {
+            background-color: #dbeafe;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+        }
+
+        /* Card 2: Fully rounded corners and gradient background */
+        .card-two {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            border: 2px solid #059669;
+            border-radius: 30px;
+        }
+
+        /* Card 3: Dark background and pill-shaped top corners */
+        .card-three {
+            background-color: #312e81;
+            color: white;
+            border: 2px solid #818cf8;
+            border-radius: 40px 10px 40px 10px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .card-label {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .conclusion {
+            margin: 40px auto 0;
+            max-width: 850px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Assignment 27: Three Styled Card Variants</h1>
+
+    <p class="aim">
+        <strong>Aim:</strong> To create three different card designs using
+        CSS border-radius and background properties.
+    </p>
+
+    <div class="card-container">
+
+        <div class="card card-one">
+            <h2>Card One</h2>
+            <p>This card has a light blue background with simple rounded corners.</p>
+            <p class="card-label">Design: Simple & Clean</p>
+            <p><strong>Border Radius:</strong> 12px</p>
+        </div>
+
+        <div class="card card-two">
+            <h2>Card Two</h2>
+            <p>This card uses a green gradient background and more rounded corners.</p>
+            <p class="card-label">Design: Fresh & Modern</p>
+            <p><strong>Border Radius:</strong> 30px</p>
+        </div>
+
+        <div class="card card-three">
+            <h2>Card Three</h2>
+            <p>This card has a dark purple background with differently rounded corners.</p>
+            <p class="card-label">Design: Bold & Stylish</p>
+            <p><strong>Border Radius:</strong> 40px 10px 40px 10px</p>
+        </div>
+
+    </div>
+
+    <div class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            In this assignment, three different card variants were created using
+            CSS. The <strong>border-radius</strong> property changes the shape
+            of the corners, while background colors and gradients give each card
+            a unique appearance. CSS classes make it possible to style each card
+            separately.
+        </p>
+    </div>
+
+</body>
+</html>

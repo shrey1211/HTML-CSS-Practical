@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 28 - Fixing Overflow</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        .aim {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 220px;
+            min-width: 0;
+            padding: 20px;
+            background-color: #dbeafe;
+            border: 2px solid #60a5fa;
+            border-radius: 10px;
+        }
+
+        /* Fix long words and URLs overflowing their containers */
+        .card p {
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        /* Make images responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .solution {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #dcfce7;
+            border-left: 5px solid #16a34a;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            background-color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Assignment 28: Fixing Overflow</h1>
+
+    <p class="aim">
+        <strong>Aim:</strong> To identify and fix CSS overflow problems
+        that can break a webpage layout.
+    </p>
+
+    <div class="container">
+
+        <h2>Overflow Problem — Fixed Layout</h2>
+
+        <p>
+            The following cards demonstrate a responsive layout.
+            The content wraps inside each card instead of overflowing
+            beyond the page boundaries.
+        </p>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Card One</h3>
+                <p>
+                    This is a normal paragraph. The text stays inside
+                    the card and adjusts to the available space.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Card Two</h3>
+                <p>
+                    Thisisaverylongwordthatcouldbreakthelayoutifthetextdoesnotwrapproperly.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Card Three</h3>
+                <p>
+                    The cards can move onto the next line when the screen
+                    becomes smaller, helping prevent horizontal overflow.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="solution">
+            <h2>How the Overflow Was Fixed</h2>
+
+            <p>
+                <strong>1. box-sizing: border-box;</strong><br>
+                Includes padding and borders within an element's specified width.
+            </p>
+
+            <p>
+                <strong>2. flex-wrap: wrap;</strong><br>
+                Allows cards to move onto another line when space is limited.
+            </p>
+
+            <p>
+                <strong>3. min-width: 0;</strong><br>
+                Allows flex items to shrink within their available space.
+            </p>
+
+            <p>
+                <strong>4. overflow-wrap: anywhere;</strong><br>
+                Allows very long words to break rather than extend outside a card.
+            </p>
+
+            <p>
+                <strong>5. max-width: 100%;</strong><br>
+                Prevents images from becoming wider than their containers.
+            </p>
+        </div>
+
+        <h2>Important CSS Used</h2>
+
+        <pre>
+* {
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+.card p {
+    overflow-wrap: anywhere;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+        </pre>
+
+    </div>
+
+    <footer>
+        <p>Assignment 28 completed successfully.</p>
+    </footer>
+
+</body>
+</html>
