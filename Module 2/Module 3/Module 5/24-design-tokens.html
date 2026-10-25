@@ -1,0 +1,178 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage demonstrating CSS design tokens using variables.">
+    <title>Assignment 24 - CSS Design Tokens</title>
+
+    <style>
+        /* DESIGN TOKENS */
+        :root {
+            /* Colour Variables */
+            --primary-color: #23395B;
+            --secondary-color: #2A7F80;
+            --background-color: #F3F6FA;
+            --card-color: #FFFFFF;
+            --text-color: #333D4B;
+            --muted-color: #65758B;
+            --border-color: #D9E2EC;
+
+            /* Font Size Variables */
+            --font-small: 14px;
+            --font-medium: 16px;
+            --font-large: 22px;
+            --font-heading: 32px;
+
+            /* Spacing Variables */
+            --spacing-small: 10px;
+            --spacing-medium: 20px;
+            --spacing-large: 30px;
+
+            /* Border Radius Variable */
+            --border-radius: 8px;
+        }
+
+        /* General Page Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: var(--spacing-large);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: var(--font-medium);
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--card-color);
+            text-align: center;
+            padding: var(--spacing-large);
+            border-radius: var(--border-radius);
+        }
+
+        header h1 {
+            font-size: var(--font-heading);
+            margin: 0;
+        }
+
+        header p {
+            font-size: var(--font-small);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: var(--spacing-large) auto;
+        }
+
+        /* Content Cards */
+        .card {
+            background-color: var(--card-color);
+            padding: var(--spacing-medium);
+            margin-bottom: var(--spacing-medium);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+        }
+
+        .card h2 {
+            color: var(--secondary-color);
+            font-size: var(--font-large);
+        }
+
+        .card p {
+            font-size: var(--font-medium);
+        }
+
+        /* Button */
+        .button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--card-color);
+            padding: var(--spacing-small) var(--spacing-medium);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-size: var(--font-medium);
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: var(--muted-color);
+            font-size: var(--font-small);
+            padding: var(--spacing-medium);
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 600px) {
+            body {
+                padding: var(--spacing-small);
+            }
+
+            header h1 {
+                font-size: var(--font-large);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Design Tokens</h1>
+        <p>Learning to manage styles with CSS variables</p>
+    </header>
+
+    <main>
+
+        <section class="card">
+            <h2>What Are Design Tokens?</h2>
+            <p>
+                Design tokens are reusable values such as colours, font sizes,
+                spacing, and border radius. CSS variables allow us to define
+                these values once and reuse them throughout a webpage.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Colour Palette</h2>
+            <p>
+                This webpage uses navy blue, teal, white, and light grey-blue
+                to create a consistent and professional design.
+            </p>
+            <a href="#font-sizes" class="button">Explore Font Sizes</a>
+        </section>
+
+        <section class="card" id="font-sizes">
+            <h2>Typography</h2>
+            <p style="font-size: var(--font-small);">
+                This text uses the small font-size variable.
+            </p>
+            <p style="font-size: var(--font-medium);">
+                This text uses the medium font-size variable.
+            </p>
+            <p style="font-size: var(--font-large);">
+                This text uses the large font-size variable.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CSS Design Tokens Assignment</p>
+    </footer>
+
+</body>
+</html>
+```

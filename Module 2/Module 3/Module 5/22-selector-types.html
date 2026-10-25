@@ -1,0 +1,152 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage demonstrating different CSS selector types.">
+    <title>Assignment 22 - CSS Selectors</title>
+
+    <style>
+        /* 1. Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6fa;
+            color: #333333;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* 2. Class Selector */
+        .highlight {
+            background-color: #e0edff;
+            padding: 15px;
+            border-left: 5px solid #3478c9;
+            border-radius: 5px;
+        }
+
+        /* 3. ID Selector */
+        #main-heading {
+            color: #234a75;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 4. Descendant Selector */
+        section p {
+            font-size: 16px;
+            color: #444444;
+        }
+
+        /* 5. Group Selector */
+        h2, h3 {
+            color: #315f8c;
+        }
+
+        header {
+            background-color: #dce8f7;
+            padding: 10px;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #dfe5ec;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #245da8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #dce8f7;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="main-heading">Understanding CSS Selectors</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Element Selector</h2>
+            <p>
+                The element selector styles all elements of a specified type.
+                In this page, the body selector sets the font, background colour,
+                text colour, and spacing for the entire page.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Class Selector</h2>
+            <p class="highlight">
+                This paragraph uses the highlight class selector.
+                A class selector begins with a dot (.) in CSS and can be
+                applied to multiple HTML elements.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. ID Selector</h2>
+            <p>
+                The main heading uses the ID selector.
+                An ID selector begins with a hash symbol (#) and targets
+                an element with a specific ID.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Descendant Selector</h2>
+            <p>
+                The CSS selector section p targets paragraph elements
+                located inside a section element. It changes their font size
+                and text colour.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Group Selector</h2>
+            <h3>One Rule for Multiple Elements</h3>
+            <p>
+                The group selector applies the same style to multiple selectors.
+                Here, h2 and h3 headings share the same text colour.
+            </p>
+        </section>
+
+        <section>
+            <h2>Learn More</h2>
+            <p>
+                Visit
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors">
+                    the CSS selectors guide
+                </a>
+                to learn more about CSS selectors.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CSS Selectors Practical Assignment</p>
+    </footer>
+
+</body>
+</html>
+```

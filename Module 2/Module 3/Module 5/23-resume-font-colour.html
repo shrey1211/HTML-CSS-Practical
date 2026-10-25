@@ -1,0 +1,256 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional resume webpage demonstrating CSS typography and colour palettes.">
+    <title>Assignment 23 - Professional Resume</title>
+
+    <style>
+        /* Colour palette:
+           Navy: #23395B
+           Teal: #2A7F80
+           Background: #F3F6FA
+           Text: #333D4B
+           White: #FFFFFF
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            background-color: #F3F6FA;
+            color: #333D4B;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        .resume {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(35, 57, 91, 0.12);
+        }
+
+        header {
+            background-color: #23395B;
+            color: #FFFFFF;
+            padding: 35px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            color: #D8E5F3;
+            font-size: 16px;
+        }
+
+        .contact {
+            margin-top: 15px;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact a {
+            color: #BDE9E5;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 30px 35px;
+        }
+
+        section {
+            margin-bottom: 28px;
+        }
+
+        h2 {
+            color: #23395B;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            border-bottom: 2px solid #2A7F80;
+            padding-bottom: 7px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #2A7F80;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills li {
+            background-color: #E5F3F2;
+            color: #245E60;
+            padding: 6px 13px;
+            border-radius: 5px;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .resume-link {
+            color: #246C70;
+            text-decoration: none;
+        }
+
+        .resume-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #E8EEF5;
+            color: #4A596B;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 25px 15px;
+            }
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            main {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+
+        <header>
+            <h1>Shreyanshi Kumari</h1>
+            <p>Aspiring Web Developer | Student</p>
+
+            <div class="contact">
+                <p>
+                    Email:
+                    <a href="mailto:example@email.com">example@email.com</a>
+                </p>
+                <p>
+                    LinkedIn:
+                    <a href="https://www.linkedin.com/">LinkedIn Profile</a>
+                </p>
+                <p>Location: India</p>
+            </div>
+        </header>
+
+        <main>
+
+            <section>
+                <h2>Profile Summary</h2>
+                <p>
+                    Motivated student interested in web development and technology.
+                    Eager to develop practical skills, learn new tools, and work
+                    on projects that solve real-world problems.
+                </p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <h3>Senior Secondary Education</h3>
+                <p>
+                    Central Board of Secondary Education (CBSE)
+                </p>
+                <p>Stream: Physics, Chemistry and Biology</p>
+            </section>
+
+            <section>
+                <h2>Technical Skills</h2>
+                <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>VS Code</li>
+                    <li>GitHub Basics</li>
+                    <li>Problem-Solving</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <h3>Personal Introduction Webpage</h3>
+                <p>
+                    Created a webpage using HTML and CSS to present personal
+                    information, skills, and educational details.
+                </p>
+
+                <h3>Student Registration Form</h3>
+                <p>
+                    Developed a basic HTML form using different input types
+                    to collect student information.
+                </p>
+            </section>
+
+            <section>
+                <h2>Strengths</h2>
+                <ul>
+                    <li>Willingness to learn new technologies</li>
+                    <li>Good communication and teamwork</li>
+                    <li>Adaptability and time management</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Career Objective</h2>
+                <p>
+                    To build a strong foundation in web development, gain
+                    practical experience, and continue improving my technical
+                    and professional skills.
+                </p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Resume Webpage | Created for HTML and CSS Assignment 23</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+```
